@@ -1,0 +1,43 @@
+body {
+  background-color:#fff;
+
+}
+
+
+ul {
+  list-style: none;
+}
+
+.centering {
+  float:none;
+  margin:0 auto;
+}
+
+
+.title{
+  font-family: 'verdana', arial, helvetica;
+  color: blue;
+  font-size: 20px;
+  margin-top: 10px;
+  /*border-top: solid #ddd 1px;*/
+  border-bottom: solid #ddd 1px;
+  padding: 10px 5px 10px 5px;
+}
+
+.nav {
+  margin-bottom: 45px;
+}
+
+.regForm {
+  background-color:#C7F0CA;
+}
+
+
+.cMargin {
+  margin-left: 742px;
+}
+
+
+.img-thumbnail{
+  height: 70px;
+}

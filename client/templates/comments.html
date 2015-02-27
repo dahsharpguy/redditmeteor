@@ -1,0 +1,9 @@
+<template name="comments">
+  {{posts.title}}
+  {{> quickForm collection="Comments" id="insertComment" type="insert"}}
+  {{#each comments}}
+  <div class="col-sm-6 col-sm-offset-6">
+    <li>{{description}}</li>
+  </div>
+  {{/each}}
+</template>

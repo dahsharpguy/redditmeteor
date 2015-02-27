@@ -1,0 +1,42 @@
+<template name="reddit">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        {{#each posts}}
+        <ul>
+
+          <li class="title"> <img src="{{getImg picture}}" alt="" class=" img img-thumbnail img-rounded"> <a href="{{url}}">{{title}}</a></li>
+          {{#if isOwned}}
+          {{#quickRemoveButton collection="Posts" _id=this._id}}<span class="label label-warning">Delete</span>{{/quickRemoveButton}}
+          {{/if}}
+        </ul>
+  <!-- <button type="button" class="btn btn-default"><a href="{{pathFor 'comments'}}"></a>Comments</button> -->
+        {{/each}}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4">
+        
+      </div>
+    </div>
+
+  </div>
+  
+  <!-- Modal -->
+   <div class="col-md-6 col-offset-6 cMargin">
+  <div class="row">
+   
+      {{#if currentUser}}
+    {{#afModal class="btn btn-primary" collection="Posts" operation="insert"}}
+    Add a new post
+    {{/afModal}}
+
+    {{> autoformModals collection="Posts" id="insertPosts" type="insert"}}
+    {{/if}}
+    </div>
+  </div>
+  
+  
+</template>
+

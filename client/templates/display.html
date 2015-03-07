@@ -3,13 +3,14 @@
     <div class="row">
       <div class="col-sm-12">
         {{#each posts}}
-        <ul>
-
-          <li class="title"> <img src="{{getImg picture}}" alt="" class=" img img-thumbnail img-rounded"> <a href="{{url}}">{{title}}</a></li>
+        <div class="panel panel-body">
+          <ul>
+          <li class="title"> <img src="{{getImg picture}}" alt="" class="img img-thumbnail img-rounded"> <a href="{{url}}">{{title}}</a></li>
           {{#if isOwned}}
           {{#quickRemoveButton collection="Posts" _id=this._id}}<span class="label label-warning">Delete</span>{{/quickRemoveButton}}
           {{/if}}
         </ul>
+        </div>
   <!-- <button type="button" class="btn btn-default"><a href="{{pathFor 'comments'}}"></a>Comments</button> -->
         {{/each}}
       </div>
